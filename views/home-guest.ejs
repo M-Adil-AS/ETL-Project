@@ -1,0 +1,42 @@
+<%- include('includes/header') %>
+
+<div class="outer-padding"> 
+  <div class="container p-1">
+
+    <%errors.forEach((error)=>{%>
+      <div class="alert alert-danger small text-center"><%=error%></div>
+    <%})%>
+
+    <%success.forEach((msg)=>{%>
+      <div class="alert alert-success small text-center"><%=msg%></div>
+    <%})%>
+
+    <div class="row align-items-center">
+      <div class="col-lg-7 py-3 py-md-5 info">
+        <h1 class="display-3">Welcome to NASA Exoplanet Archive</h1>      
+        <p class="lead text-muted">Access to 4000+ Exoplanet records</p>
+      </div>
+
+      <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
+        <div class="balance">
+          <p class="lead text-muted">
+            <a href='/api'>Click here</a> to get Exoplanet data in raw JSON format
+          </p>
+          <p class="lead text-muted">
+            <% if(user){%> 
+              <form action="/update" method="POST" id="registration-form">
+                <button type="submit" class="btn btn-success">Perform ETL Process</button>       
+              </form>
+            <%} 
+            
+            else{%> 
+              Sign in to perform ETL Process
+            <%}%> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

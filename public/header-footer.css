@@ -1,0 +1,57 @@
+body, .tooltip
+{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-bar 
+{
+  background-color: #292929;
+}
+
+.navbar{
+  padding: .5rem 3rem;
+}
+
+.outer-padding{
+  padding: .5rem 3rem;
+}
+
+#blackcreek{
+  height:30px;
+  width:auto;
+  margin-bottom: 2%;
+}
+
+.navbar-brand small{
+  font-size: 20px;
+}
+
+.profile{
+  margin-right: 8px;
+}
+
+.logoutForm{
+  margin-left: 8px;
+}
+
+.logout{
+  width:100%;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand small{font-size: 17px;}
+  .profile, .logoutForm{flex: 1 1 auto;}
+  .navbar, .outer-padding{padding: .5rem 2rem;}
+}
+
+@media (max-width: 340px) {
+  .navbar-brand small{font-size: 15px;}
+  .navbar-toggler-icon{font-size: 0.8em;}
+  .logoutForm{margin-top: 14px;}
+  .profile, .logoutForm{flex: 100%; margin-left: 0; margin-right: 0;}
+  .navbar, .outer-padding{padding: .5rem 1.3rem;}
+}
+
+footer .mt-3, footer .text-muted{
+  color:rgba(255, 255, 255, 0.801) !important;
+}

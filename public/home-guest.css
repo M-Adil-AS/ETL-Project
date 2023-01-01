@@ -1,0 +1,99 @@
+body{
+  background-image: url('planetBG.jpg');
+  background-size: cover;
+}
+
+h1, .info p{
+  color:rgba(255, 255, 255, 0.877) !important;
+}
+
+.info p, .text-muted, .text-muted a{
+  color:rgba(255, 255, 255, 0.801) !important;
+}
+
+.balance{
+  margin-top: 23vh;
+  margin-bottom: 23vh;
+}
+
+.input-dark {
+  background-color: #444;
+  border-color: transparent;
+  color: #FFFFFF;
+}
+
+.input-dark:focus {
+  color: #FFFFFF;
+  background-color: #555;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.input-dark::-webkit-input-placeholder {color: #888;}
+.input-dark::-moz-placeholder {color: #888;}
+.input-dark:-ms-input-placeholder {color: #888;}
+.input-dark:-moz-placeholder {color: #888;}
+
+@media (min-width: 768px) {
+  .input-dark {
+   width: auto;
+  }
+}
+
+.display-3 {
+  font-size: 3.35rem;
+  margin-top:30px;
+}
+
+.signup{
+  padding: 15px 0px;
+}
+
+@media (max-width: 1000px) {
+  #registration-form .signup{padding: 12px 0px;}
+}
+
+@media (max-width: 768px) {
+  .display-3 {font-size: 2.5rem}
+  #registration-form .signup{font-size: medium;}
+  .balance{
+    margin-top: 18vh;
+    margin-bottom: 18vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .info .img-1{display: none;}
+  .info .img-2{display: block;}
+  .balance{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+}
+
+@media (max-width: 340px) {
+  .display-3 {font-size: 2rem}
+}
+
+.img-2{
+  display: none;
+}
+
+.lead{
+  margin-top:30px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input{
+  position: relative;
+  z-index: 2;
+}
+
+img{
+  height:auto;
+  width:100%;
+}
