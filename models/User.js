@@ -1,6 +1,9 @@
 const planetsCollection = require('../db').db().collection('Exoplanets')
 const usersCollection = require('../db').db().collection('Authorized')
-const extractJson = require('../src/source.json')
+const fs = require('fs')
+const fsPromises = fs.promises
+const { dirname } = require('path');
+const csvPath = `${dirname(require.main.filename).replaceAll("\\", "/")}/src/source.csv`;
 const axios = require('axios')
 const csvtojson = require("csvtojson")
 
@@ -15,12 +18,13 @@ User.startEtlPipeline = function(){
       // Step:1 Extraction
       let promises = [
         User.extractFromApi('https://mocki.io/v1/7dec1516-4417-4542-b3d7-e69d9fc8794c'),
-        User.extractFromApi('https://run.mocky.io/v3/ed3b5a89-4234-4428-8625-0a49a926602d'),
-        csvtojson().fromFile('C:/Users/ADIL AHMAD/Desktop/ETL project/src/source.csv')
+        User.extractFromApi('https://run.mocky.io/v3/2aa93ac1-c240-4823-8c10-f1a3f39a0bee'),
+        csvtojson().fromFile(csvPath),
+        fsPromises.readFile('src/source.json', 'utf8')
       ]
 
       let resolved_promises = await Promise.all(promises)
-      let planets = [...resolved_promises.flat(), ...extractJson]
+      let planets = [...resolved_promises.slice(0,3).flat(), ...JSON.parse(resolved_promises[3])]
       
       // Step:2 Transformation
       planets = planets.map(planet => User.transformData(planet))
@@ -122,8 +126,8 @@ User.prototype.login = function(){
 }
 
 User.prototype.cleanUp = function(){
-    if(typeof(this.data.email)!= "string"){this.data.email = ""}
-    if(typeof(this.data.password)!= "string"){this.data.password = ""}
+  if(typeof(this.data.email)!= "string"){this.data.email = ""}
+  if(typeof(this.data.password)!= "string"){this.data.password = ""}
 
   this.data = {
     email:    this.data.email.trim().toLowerCase(),
