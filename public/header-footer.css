@@ -38,6 +38,31 @@ body, .tooltip
   width:100%;
 }
 
+.input-dark {
+  background-color: #444;
+  border-color: transparent;
+  color: #FFFFFF;
+}
+
+.input-dark:focus {
+  color: #FFFFFF;
+  background-color: #555;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.input-dark::-webkit-input-placeholder {color: #888;}
+.input-dark::-moz-placeholder {color: #888;}
+.input-dark:-ms-input-placeholder {color: #888;}
+.input-dark:-moz-placeholder {color: #888;}
+
+@media (min-width: 768px) {
+  .input-dark {
+   width: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-brand small{font-size: 17px;}
   .profile, .logoutForm{flex: 1 1 auto;}

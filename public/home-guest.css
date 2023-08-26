@@ -16,31 +16,6 @@ h1, .info p{
   margin-bottom: 23vh;
 }
 
-.input-dark {
-  background-color: #444;
-  border-color: transparent;
-  color: #FFFFFF;
-}
-
-.input-dark:focus {
-  color: #FFFFFF;
-  background-color: #555;
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-
-.input-dark::-webkit-input-placeholder {color: #888;}
-.input-dark::-moz-placeholder {color: #888;}
-.input-dark:-ms-input-placeholder {color: #888;}
-.input-dark:-moz-placeholder {color: #888;}
-
-@media (min-width: 768px) {
-  .input-dark {
-   width: auto;
-  }
-}
-
 .display-3 {
   font-size: 3.35rem;
   margin-top:30px;

@@ -1,27 +1,5 @@
 const User = require('../models/User')
 
-exports.update = function(req,res){
-  User.startEtlPipeline().then(()=>{
-    req.flash('success', 'ETL Process Successful!')
-    req.session.save(()=>{
-      res.redirect(`/`)
-    }) 
-  }).catch((error)=>{
-    req.flash('error', error)
-    req.session.save(()=>{
-      res.redirect(`/`)
-    }) 
-  })
-}
-
-exports.api = function(req,res){
-  User.api().then((exoplanets)=>{
-    res.json(exoplanets)
-  }).catch((error)=>{
-    res.json(error) 
-  })
-}
-
 exports.login = function(req,res){
   let user = new User(req.body)
   user.login().then(()=>{
@@ -42,6 +20,10 @@ exports.login = function(req,res){
 
 exports.home = function(req, res){
   res.render('home-guest',{errors:req.flash('errors'), success:req.flash('success'), cssFile:'/home-guest.css'})
+}
+
+exports.exoplanets_screen = function(req, res){
+  res.render('exoplanets',{errors:req.flash('errors'), success:req.flash('success'), cssFile:'/exoplanets.css', script:'/exoplanets.js'})
 }
 
 exports.logout = function(req,res){

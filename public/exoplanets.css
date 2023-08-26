@@ -1,0 +1,71 @@
+body{
+    background-image: url('planetBG.jpg');
+}
+
+table, tr, td{
+    color: white;
+}
+  
+ul{
+    overflow-x: scroll;
+    width: 100%;
+}
+
+ul button{
+    width: 50px;
+}
+
+.page-link{
+    background: rgb(7, 7, 36);
+    color: white;
+    border: 1px solid black;
+}
+
+.active, .active .page-link{
+    background: black !important;
+    border-color: #dee2e6 !important;
+}
+
+.page-link:focus{
+    border: 1px solid #dee2e6;
+    box-shadow: none;
+}
+
+.page-link:hover{
+    color:black;
+}
+
+.page-item{
+    margin-bottom: 7px;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1d183a;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+.inputContainer input, .inputContainer select{
+    max-width: 200px;
+    display: inline-block !important;
+    min-width: 200px;
+    margin: 10px;
+    background: #212529 !important;
+}
+
+.inputContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

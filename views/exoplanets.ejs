@@ -1,0 +1,57 @@
+<%- include('includes/header') %>
+
+<div class="outer-padding"> 
+
+    <%errors.forEach((error)=>{%>
+      <div class="alert alert-danger small text-center"><%=error%></div>
+    <%})%>
+
+    <%success.forEach((msg)=>{%>
+      <div class="alert alert-success small text-center"><%=msg%></div>
+    <%})%>
+
+    <div class="flex flex-wrap form-group align-items-center inputContainer">
+      <input type='search' class="form-control planetName input-dark" placeholder="Search by Name" disabled> 
+      <input type='number' class="form-control neighborStars input-dark" placeholder="Neighbor Stars" disabled> 
+      <input type='number' class="form-control neighborPlanets input-dark" placeholder="Neighbor Planets" disabled> 
+      <select class="form-control method input-dark" disabled>
+        <option>All Methods</option>
+      </select>
+      <input type='number' class="form-control discoveryYear input-dark" placeholder="Discovery Year" disabled> 
+      <select class="form-control facility input-dark" disabled>
+        <option>All Facilities</option>
+      </select>
+    </div>
+
+    <div class="table-responsive mt-4">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Neighbor Stars</th>
+            <th scope="col">Neighbor Planets</th>
+            <th scope="col">Discovery Method</th>
+            <th scope="col">Discovery Year</th>
+            <th scope="col">Discovery Facility</th>
+            <th scope="col">Orbital Period Value</th>
+            <th scope="col">Orbital Period Error</th>
+            <th scope="col">Radius Value</th>
+            <th scope="col">Radius Error</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>      
+      </table>
+    </div>
+
+    <nav aria-label="..." class="mt-4">
+      <ul class="pagination flex flex-nowrap">
+        <li class="page-item active"><button class="page-link">1</button></li>  
+      </ul>
+    </nav>
+    
+</div>
+
+<%- include('includes/footer') %>

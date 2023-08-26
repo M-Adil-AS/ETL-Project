@@ -20,11 +20,11 @@
       <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
         <div class="balance">
           <p class="lead text-muted">
-            <a href='/api'>Click here</a> to get Exoplanet data in raw JSON format
+            <a href='/exoplanets_screen'>Click here</a> to view Exoplanets data
           </p>
           <p class="lead text-muted">
             <% if(user){%> 
-              <form action="/update" method="POST" id="registration-form">
+              <form action="/ETL" method="POST" id="registration-form">
                 <button type="submit" class="btn btn-success">Perform ETL Process</button>       
               </form>
             <%} 
