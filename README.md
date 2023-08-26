@@ -11,6 +11,4 @@ Step 3: In the loading phase, the transformed data is directly loaded into a Mon
 
 Furthermore, to allow the visitors to view the data stored in the MongoDB database, an API endpoint streams data chunks to the frontend, enabling the browser to process and present large datasets with improved responsiveness.
 
-![etl-guest](https://user-images.githubusercontent.com/115668271/210161184-5e4608c0-6d95-49ea-a78c-1868c117f9dc.PNG)
-
-![etl-admin](https://user-images.githubusercontent.com/115668271/210161188-1c07893e-0c31-4b0d-81d9-cd5df0732bdf.PNG)
+https://github.com/M-Adil-AS/ETL-Project/assets/115668271/f540e4bd-6515-4d9b-acfa-7fcef0f49dc9
